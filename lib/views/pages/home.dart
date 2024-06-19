@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hanime_app/size_config.dart';
@@ -9,30 +8,19 @@ import 'package:hanime_app/views/widgets/shared/drawer.dart';
 import 'package:hanime_app/views/widgets/home/recently_watch.dart';
 import 'package:motion_toast/motion_toast.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey =
-      GlobalKey<CurvedNavigationBarState>();
-  DateTime? currentBackPressTime;
-
-  @override
   Widget build(BuildContext context) {
+    DateTime? currentBackPressTime;
+
     return Scaffold(
-      key: _scaffoldKey,
       appBar: PreferredSize(
         preferredSize: MediaQuery.of(context).size * 0.070,
-        child: HanimeAppBar(scaffoldKey: _scaffoldKey),
+        child: const HanimeAppBar(),
       ),
-      drawer: HanimeDrawer(
-        scaffoldKey: _scaffoldKey,
-      ),
+      drawer: const HanimeDrawer(),
       onDrawerChanged: (isOpened) {
         isOpened = !isOpened;
       },
@@ -51,6 +39,7 @@ class _HomeState extends State<Home> {
                 toastDuration: const Duration(seconds: 2),
                 displaySideBar: false,
                 borderRadius: 10,
+                height: 50,
               ).show(context);
             } else {
               SystemNavigator.pop();
@@ -76,10 +65,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      bottomNavigationBar: HanimeBottomNavigationBar(
-        bottomNavigationKey: _bottomNavigationKey,
-        index: 0,
-      ),
+      bottomNavigationBar: const HanimeBottomNavigationBar(index: 0),
     );
   }
 }

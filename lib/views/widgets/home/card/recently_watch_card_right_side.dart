@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class RecentlyWatchCardRightSide extends StatelessWidget {
   const RecentlyWatchCardRightSide({
@@ -34,7 +35,7 @@ class RecentlyWatchCardRightSide extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            'Author',
+            'author'.tr,
             style: TextStyle(
               color: Theme.of(context).textTheme.bodySmall?.color,
               fontSize: Theme.of(context).textTheme.bodySmall?.fontSize,

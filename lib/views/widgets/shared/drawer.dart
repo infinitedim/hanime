@@ -5,12 +5,7 @@ import 'package:hanime_app/routes/routes.dart';
 import 'package:hanime_app/size_config.dart';
 
 class HanimeDrawer extends StatelessWidget {
-  const HanimeDrawer({
-    super.key,
-    required GlobalKey<ScaffoldState> scaffoldKey,
-  }) : _scaffoldKey = scaffoldKey;
-
-  final GlobalKey<ScaffoldState> _scaffoldKey;
+  const HanimeDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +37,7 @@ class HanimeDrawer extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  _scaffoldKey.currentState?.closeDrawer();
+                  Scaffold.of(context).closeDrawer();
                 },
                 icon: FaIcon(
                   FontAwesomeIcons.xmark,

@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,9 +15,6 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey =
-      GlobalKey<CurvedNavigationBarState>();
   final List<String> items = [
     'By popularity',
     'By name',
@@ -34,14 +30,11 @@ class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
       appBar: PreferredSize(
         preferredSize: MediaQuery.of(context).size * 0.070,
-        child: HanimeAppBar(scaffoldKey: _scaffoldKey),
+        child: const HanimeAppBar(),
       ),
-      drawer: HanimeDrawer(
-        scaffoldKey: _scaffoldKey,
-      ),
+      drawer: const HanimeDrawer(),
       onDrawerChanged: (isOpened) {
         isOpened = !isOpened;
       },
@@ -215,10 +208,7 @@ class _ExplorePageState extends State<ExplorePage> {
           ],
         ),
       ),
-      bottomNavigationBar: HanimeBottomNavigationBar(
-        bottomNavigationKey: _bottomNavigationKey,
-        index: 1,
-      ),
+      bottomNavigationBar: const HanimeBottomNavigationBar(index: 1),
     );
   }
 }

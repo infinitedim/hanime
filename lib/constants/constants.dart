@@ -1,5 +1,8 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hanime_app/model/language_model.dart';
 import 'package:hanime_app/size_config.dart';
 
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -75,3 +78,21 @@ OutlineInputBorder outlineInputBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
   borderSide: const BorderSide(color: Colors.grey),
 );
+
+class AppConstants {
+  static const String COUNTRY_CODE = 'country_code';
+  static const String LANGUAGE_CODE = 'language_code';
+
+  static List<LanguageModel> languages = [
+    LanguageModel(
+      languageName: 'English',
+      countryCode: 'US',
+      languageCode: 'en',
+    ),
+    LanguageModel(
+      languageName: 'Bahasa',
+      countryCode: 'ID',
+      languageCode: 'id',
+    ),
+  ];
+}
