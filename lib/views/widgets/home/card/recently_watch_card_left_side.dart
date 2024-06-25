@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class RecentlyWatchCardLeftSide extends StatelessWidget {
+class RecentlyWatchCardLeftSide extends GetView {
   const RecentlyWatchCardLeftSide({
     super.key,
   });

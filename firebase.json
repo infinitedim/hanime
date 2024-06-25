@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "hanime-38960",
+          "appId": "1:168087597633:android:250635b8aa61c317ec0cc0",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "hanime-38960",
+          "configurations": {
+            "android": "1:168087597633:android:250635b8aa61c317ec0cc0",
+            "ios": "1:168087597633:ios:13fef370f4fdeab2ec0cc0"
+          }
+        }
+      }
+    }
+  }
+}

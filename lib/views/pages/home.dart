@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import 'package:hanime_app/size_config.dart';
 import 'package:hanime_app/views/widgets/home/for_you.dart';
 import 'package:hanime_app/views/widgets/shared/app_bar.dart';
 import 'package:hanime_app/views/widgets/shared/bottom_navigation_bar.dart';
 import 'package:hanime_app/views/widgets/shared/drawer.dart';
 import 'package:hanime_app/views/widgets/home/recently_watch.dart';
-import 'package:motion_toast/motion_toast.dart';
 
-class Home extends StatelessWidget {
+class Home extends GetView {
   const Home({super.key});
 
   @override
@@ -33,20 +34,20 @@ class Home extends StatelessWidget {
                 now.difference(currentBackPressTime!) >
                     const Duration(seconds: 2)) {
               currentBackPressTime = now;
-              MotionToast.error(
-                animationDuration: Duration.zero,
-                description: const Text("Tekan Sekali lagi untuk keluar"),
-                toastDuration: const Duration(seconds: 2),
-                displaySideBar: false,
-                borderRadius: 10,
-                height: 50,
-              ).show(context);
+              Fluttertoast.showToast(
+                msg: 'pressToExit'.tr.capitalizeFirst!,
+                toastLength: Toast.LENGTH_SHORT,
+                gravity: ToastGravity.BOTTOM,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 16.0,
+              );
             } else {
               SystemNavigator.pop();
             }
           }
         },
-
         child: Container(
           height: SizeConfig.screenHeight,
           width: SizeConfig.screenWidth,

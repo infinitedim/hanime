@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:get/get.dart';
 import 'package:hanime_app/constants/constants.dart';
 import 'package:hanime_app/model/language_model.dart';
@@ -11,8 +12,10 @@ class LocalizationController extends GetxController implements GetxService {
     loadCurrentLanguage();
   }
 
-  Locale _locale = Locale(AppConstants.languages[0].languageCode,
-      AppConstants.languages[0].countryCode);
+  Locale _locale = Locale(
+    AppConstants.languages[0].languageCode,
+    AppConstants.languages[0].countryCode,
+  );
 
   int _selectedIndex = 0;
   int get selectedIndex => _selectedIndex;
@@ -53,7 +56,6 @@ class LocalizationController extends GetxController implements GetxService {
   void saveLanguage(Locale locale) async {
     sharedPreferences.setString(
         AppConstants.LANGUAGE_CODE, locale.languageCode);
-    sharedPreferences.setString(
-        AppConstants.COUNTRY_CODE, locale.countryCode ?? '');
+    sharedPreferences.setString(AppConstants.COUNTRY_CODE, locale.countryCode!);
   }
 }

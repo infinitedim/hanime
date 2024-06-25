@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ThemeController extends GetxController {
-  var isDarkMode = false.obs;
+  final RxBool _isDarkMode = false.obs;
+
+  bool get isDarkMode => _isDarkMode.value;
+  set isDarkMode(bool value) {
+    _isDarkMode.value = value;
+    update();
+  }
 
   void toggleTheme() {
-    isDarkMode.value = !isDarkMode.value;
-    Get.changeThemeMode(isDarkMode.value ? ThemeMode.dark : ThemeMode.light);
-  }
-
-  @override
-  void onInit() {
-    super.onInit();
-    Get.lazyPut(() => this); // Memastikan hanya ada satu instance
+    isDarkMode = !isDarkMode;
+    Get.changeThemeMode(isDarkMode ? ThemeMode.dark : ThemeMode.light);
   }
 }
-
-ThemeController themeController = Get.find<ThemeController>();

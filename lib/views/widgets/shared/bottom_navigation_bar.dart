@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:hanime_app/routes/routes.dart';
 
-class HanimeBottomNavigationBar extends StatelessWidget {
+class HanimeBottomNavigationBar extends GetView {
   const HanimeBottomNavigationBar({
     super.key,
     required this.index,

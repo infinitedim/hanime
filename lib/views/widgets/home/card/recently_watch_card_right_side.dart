@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RecentlyWatchCardRightSide extends StatelessWidget {
+class RecentlyWatchCardRightSide extends GetView {
   const RecentlyWatchCardRightSide({
     super.key,
   });
@@ -92,7 +92,7 @@ class RecentlyWatchCardRightSide extends StatelessWidget {
             ),
             onPressed: () {},
             child: Text(
-              'Continue Watching',
+              'continue_watching'.tr.capitalizeFirst!,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.surface,
                 fontSize: 10,

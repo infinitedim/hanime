@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hanime_app/size_config.dart';
+import 'package:hanime_app/views/pages/auth/sign_in.dart';
 import 'package:hanime_app/views/pages/home.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,8 +22,6 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
-    _navigateToHome();
-
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
@@ -33,11 +33,17 @@ class _SplashScreenState extends State<SplashScreen>
       });
 
     _controller.forward();
+
+    _navigate();
   }
 
-  _navigateToHome() async {
+  _navigate() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     await Future.delayed(const Duration(seconds: 3), () {
-      Get.off(() => const Home());
+      bool hasLoggedIn = prefs.getBool('hasLoggedIn') ?? false;
+      Get.off(() {
+        return hasLoggedIn ? const Home() : const SignInPage();
+      });
     });
   }
 

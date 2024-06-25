@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:hanime_app/routes/routes.dart';
 import 'package:hanime_app/size_config.dart';
 
-class HanimeDrawer extends StatelessWidget {
+class HanimeDrawer extends GetView {
   const HanimeDrawer({super.key});
 
   @override

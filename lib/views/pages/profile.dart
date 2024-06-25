@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hanime_app/views/widgets/shared/app_bar.dart';
 import 'package:hanime_app/views/widgets/shared/bottom_navigation_bar.dart';
 import 'package:hanime_app/views/widgets/shared/drawer.dart';
+import 'package:get/get.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends GetView {
   const ProfilePage({super.key});
 
   @override

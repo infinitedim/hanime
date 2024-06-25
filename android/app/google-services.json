@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168087597633",
+    "project_id": "hanime-38960",
+    "storage_bucket": "hanime-38960.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168087597633:android:250635b8aa61c317ec0cc0",
+        "android_client_info": {
+          "package_name": "com.hanime.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArYYCIn7mhpD3WEJBH91qUb0sFWswoT5U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

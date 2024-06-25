@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hanime_app/views/widgets/home/card/recently_watch_card_left_side.dart';
 import 'package:hanime_app/views/widgets/home/card/recently_watch_card_right_side.dart';
+import 'package:get/get.dart';
 
-class RecentlyWatchCard extends StatelessWidget {
+class RecentlyWatchCard extends GetView {
   const RecentlyWatchCard({
     super.key,
   });

@@ -4,5 +4,21 @@
   "explore": "explore",
   "home": "home",
   "bookmark": "bookmark",
-  "profile": "profile"
+  "profile": "profile",
+  "general": "general",
+  "lang": "language",
+  "recent_watch": "recently watched",
+  "for_you": "for you",
+  "continue_watching": "continue watching",
+  "login": "login",
+  "register": "register",
+  "password": "password",
+  "forgotPassword": "forgot password",
+  "dontHaveAccount": "don't have account",
+  "enterPassword": "enter your password",
+  "enterEmail": "enter your email",
+  "pressToExit": "press again to exit",
+  "error.somethingWentWrong": "something went wrong",
+  "error.incorrectPassword": "incorrect password",
+  "error.passwordMissMatch": "The password and confirmation password must match, like you and me. 😉"
 }

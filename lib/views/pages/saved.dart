@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hanime_app/views/widgets/shared/app_bar.dart';
 import 'package:hanime_app/views/widgets/shared/bottom_navigation_bar.dart';
 import 'package:hanime_app/views/widgets/shared/drawer.dart';
 
-class SavedPage extends StatelessWidget {
+class SavedPage extends GetView {
   const SavedPage({super.key});
 
   @override

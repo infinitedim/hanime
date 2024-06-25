@@ -4,5 +4,21 @@
   "explore": "jelajahi",
   "home": "beranda",
   "bookmark": "tersimpan",
-  "profile": "profil"
+  "profile": "profil",
+  "general": "umum",
+  "lang": "bahasa",
+  "recent_watch": "baru ditonton",
+  "for_you": "buat kamu",
+  "continue_watching": "lanjut menonton",
+  "login": "masuk",
+  "register": "daftar",
+  "password": "sandi",
+  "forgotPassword": "lupa sandi",
+  "dontHaveAccount": "tidak punya akun",
+  "enterPassword": "masukan password",
+  "enterEmail": "masukan email",
+  "pressToExit": "tekan sekali lagi untuk keluar",
+  "error.somethingWentWrong": "terjadi kesalahan",
+  "error.incorrectPassword": "kata sandi salah",
+  "error.passwordMissMatch": "Password dan konfirmasi password harus serasi, seperti kamu dan aku. 😉"
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:hanime_app/size_config.dart';
 
-class ForYou extends StatelessWidget {
+class ForYou extends GetView {
   const ForYou({
     super.key,
   });
@@ -15,7 +16,7 @@ class ForYou extends StatelessWidget {
           Row(
             children: [
               Text(
-                'For You',
+                'for_you'.tr.capitalizeFirst!,
                 style: TextStyle(
                   color: Theme.of(context).textTheme.bodyLarge?.color,
                   fontSize:

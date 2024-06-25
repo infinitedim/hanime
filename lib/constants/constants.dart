@@ -85,14 +85,39 @@ class AppConstants {
 
   static List<LanguageModel> languages = [
     LanguageModel(
+      languageName: 'Bahasa',
+      countryCode: 'ID',
+      languageCode: 'id',
+    ),
+    LanguageModel(
       languageName: 'English',
       countryCode: 'US',
       languageCode: 'en',
     ),
     LanguageModel(
-      languageName: 'Bahasa',
-      countryCode: 'ID',
-      languageCode: 'id',
+      languageName: 'French',
+      countryCode: 'FR',
+      languageCode: 'fr',
+    ),
+    LanguageModel(
+      languageName: 'Japanese',
+      countryCode: 'JP',
+      languageCode: 'ja',
+    ),
+    LanguageModel(
+      languageName: 'Melayu',
+      countryCode: 'MY',
+      languageCode: 'ms',
+    ),
+    LanguageModel(
+      languageName: 'Tagalog',
+      countryCode: 'PH',
+      languageCode: 'tl',
+    ),
+    LanguageModel(
+      languageName: 'Russian',
+      countryCode: 'RU',
+      languageCode: 'ru',
     ),
   ];
 }
